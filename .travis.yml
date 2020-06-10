@@ -4,7 +4,7 @@ services:
   - docker
 
 install:
-  - apt -y update && apt install -y curl
+  - sudo apt -y update && apt install -y curl
   - docker pull mauikit/ubuntu-18.04-amd64
   - wget https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/nitrux-repository-util.sh -O nitrux-repository-util.sh
   - chmod +x nitrux-repository-util.sh
