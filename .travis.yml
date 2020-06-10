@@ -1,0 +1,19 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - apt -y update && apt install -y curl
+  - docker pull mauikit/ubuntu-18.04-amd64
+  - wget https://raw.githubusercontent.com/Nitrux/nitrux-repository-util/master/nitrux-repository-util.sh -O nitrux-repository-util.sh
+  - chmod +x nitrux-repository-util.sh
+
+script:
+  - docker run --rm -v $(pwd)/:/build/ -w /build/ mauikit/ubuntu-18.04-amd64 /bin/bash travis-build.sh
+  - curl --upload-file ./calamares/build/*.deb https://transfersh.com/
+
+branches:
+  only:
+    - master
+    - development

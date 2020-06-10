@@ -1,0 +1,9 @@
+# Compiled source #
+###################
+*.directory
+*.bak
+/.project
+*.db
+*.qmlc
+
+build/
