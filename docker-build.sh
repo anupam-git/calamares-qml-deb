@@ -13,4 +13,6 @@ mkdir -p calamares/build
 
     cmake -DCMAKE_BUILD_TYPE=Debug ..
     make -j$(nproc) package
+
+    chmod 777 ./*.deb
 )

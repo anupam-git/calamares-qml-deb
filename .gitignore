@@ -7,3 +7,4 @@
 *.qmlc
 
 build/
+calamares/
