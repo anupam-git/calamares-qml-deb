@@ -3,7 +3,6 @@
 docker pull mauikit/ubuntu-18.04-amd64
 docker run --rm -v $(pwd)/:/build/ -w /build/ mauikit/ubuntu-18.04-amd64 /bin/bash docker-build.sh
 
-mv ./calamares/build/*.deb ./
-du -H ./*.deb
+du -H ./calamares/build/*.deb
 
-curl --upload-file ./*.deb https://transfersh.com/
+curl --upload-file ./calamares/build/*.deb https://transfersh.com/
